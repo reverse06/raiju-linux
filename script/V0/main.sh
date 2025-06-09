@@ -3,7 +3,10 @@
 set -euo pipefail
 
 #Packages installation
- sudo ./packages-install.sh
+ ./packages-install.sh
 
  #Neovim configuration
- sudo ./nvim-config.sh
+ ./nvim-config.sh
+
+ #Alias configuration
+ ./alias-config.sh

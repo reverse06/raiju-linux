@@ -9,9 +9,12 @@ mkdir -p ~/.config/nvim
 git clone https://github.com/folke/lazy.nvim.git \
   ~/.local/share/nvim/site/pack/lazy/start/lazy.nvim
 
-echo "📝 Écriture de init.lua..."
+echo "Configuration in init.lua..."
 cat > ~/.config/nvim/init.lua <<'EOF'
 vim.opt.termguicolors = true
+vim.opt.shortmess:append("I")
+vim.opt.number = true
+
 
 require("lazy").setup({
   { "folke/tokyonight.nvim", priority = 1000 },

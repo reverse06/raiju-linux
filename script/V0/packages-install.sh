@@ -33,7 +33,6 @@ AUR_PACKAGES=(
   fd
   ripgrep
   btop
-  cheat
   navi
   visual-studio-code-bin
 )
@@ -41,6 +40,8 @@ AUR_PACKAGES=(
 sudo pacman -Syu --noconfirm
 
 sudo pacman -S --noconfirm --needed "${PACMAN_PACKAGES[@]}"
+
+sudo pacman -Sy --noconfirm --needed base-devel fakeroot
 
 yay -S --noconfirm --needed "${AUR_PACKAGES[@]}"
 
